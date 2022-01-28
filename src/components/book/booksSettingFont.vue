@@ -44,7 +44,6 @@ const actions = [
   {name: '选项三'},
 ];
 onMounted(() => {
-  console.log(currentBook)
   currentBook.value.rendition.themes.fontSize(fontSize + 'px')
 })
 

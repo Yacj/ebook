@@ -20,13 +20,11 @@
 </template>
 
 <script setup>
-import {ref} from "vue";
 import {bookHooks} from '../../hooks/book'
 import {booksStore} from "../../store/modules/books";
 import BooksSettingFont from "./booksSettingFont.vue";
 
-const settingVisible = ref(0)
-const {menuVisible} = bookHooks()
+const {menuVisible,settingVisible} = bookHooks()
 const showSetting = (key) => {
   const store = booksStore()
   store.setSettingVisible(key)
