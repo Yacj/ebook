@@ -3,12 +3,12 @@ lockfileVersion: 5.3
 specifiers:
   '@vitejs/plugin-vue': ^2.1.0
   axios: ^0.25.0
-  epubjs: 0.3.92
-  pinia: ^2.0.9
+  epubjs: ^0.3.92
+  pinia: ^2.0.10
   postcss-px-to-viewport: ^1.1.1
   qs: ^6.10.3
   sass: ^1.49.0
-  unplugin-vue-components: ^0.17.14
+  unplugin-vue-components: ^0.17.15
   vant: ^3.4.2
   vite: ^2.7.13
   vite-plugin-style-import: ^1.4.1
@@ -18,11 +18,11 @@ specifiers:
 dependencies:
   axios: 0.25.0
   epubjs: 0.3.92
-  pinia: 2.0.9_vue@3.2.27
+  pinia: 2.0.10_vue@3.2.27
   postcss-px-to-viewport: 1.1.1
   qs: 6.10.3
   sass: 1.49.0
-  unplugin-vue-components: 0.17.14_vite@2.7.13+vue@3.2.27
+  unplugin-vue-components: 0.17.15_vite@2.7.13+vue@3.2.27
   vant: 3.4.2_vue@3.2.27
   vite-plugin-style-import: 1.4.1_vite@2.7.13
   vue: 3.2.27
@@ -857,8 +857,8 @@ packages:
     engines: {node: '>=8.6'}
     dev: false
 
-  /pinia/2.0.9_vue@3.2.27:
-    resolution: {integrity: sha512-iuYdxLJKQ07YPyOHYH05wNG9eKWqkP/4y4GE8+RqEYtz5fwHgPA5kr6zQbg/DoEJGnR2XCm1w1vdt6ppzL9ATg==}
+  /pinia/2.0.10_vue@3.2.27:
+    resolution: {integrity: sha512-Gq8qCjWkz1SZSCrHqGg/k+wbeu35R7y44eDXFHJlBr5gZ8ooAf6bAHLt5zpAVIDptv09h0+XLZpy9dMHbwvXWw==}
     peerDependencies:
       '@vue/composition-api': ^1.4.0
       typescript: '>=4.4.4'
@@ -1039,8 +1039,8 @@ packages:
     engines: {node: '>= 10.0.0'}
     dev: false
 
-  /unplugin-vue-components/0.17.14_vite@2.7.13+vue@3.2.27:
-    resolution: {integrity: sha512-PSJ2EwFTxFSVg/HhUDyoYa5/s6hWqdQzlbJLOIEr0bv4Qczp5YRpTlObld5cjgieFtgPtq2W21A77ucB/msgeg==}
+  /unplugin-vue-components/0.17.15_vite@2.7.13+vue@3.2.27:
+    resolution: {integrity: sha512-KpSlv7BaPRswwlCUy7gdpiqOAaHnMeMTmMOqJPmreYTGupt+6qXH3S3uLEmPmXUcuzRXlL+4eysuVunSAbsn0A==}
     engines: {node: '>=14'}
     peerDependencies:
       '@babel/parser': ^7.15.8

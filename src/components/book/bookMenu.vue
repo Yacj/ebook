@@ -16,16 +16,20 @@
       </div>
     </div>
   </transition>
+  <books-setting-font/>
 </template>
 
 <script setup>
 import {ref} from "vue";
 import ebookHooks from '../../hooks/ebookHooks'
+import {booksStore} from "../../store/modules/books";
+import BooksSettingFont from "./booksSettingFont.vue";
 
 const settingVisible = ref(0)
 const {menuVisible} = ebookHooks()
-const showSetting = (val) => {
-  console.log(val)
+const showSetting = (key) => {
+  const store = booksStore()
+  store.setSettingVisible(key)
 }
 </script>
 

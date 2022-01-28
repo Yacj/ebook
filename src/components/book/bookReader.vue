@@ -9,6 +9,7 @@
 import Epub from "epubjs";
 import {ref, onMounted} from "vue";
 import {booksStore} from "../../store/modules/books";
+import {Toast} from "vant";
 
 const rendition = ref(null)
 const store = booksStore()
@@ -19,14 +20,19 @@ onMounted(() => {
 })
 
 function initEpub(file) {
+  const loading = Toast.loading({
+    message: '书籍加载中..',
+    forbidClick: true,
+  })
   const book = new Epub(file)
+  store.setCURRENT_BOOK(book)
   rendition.value = book.renderTo('read', {
     width: innerWidth,
     height: innerHeight,
   })
-  console.log(rendition)
   book.ready.then(res => {
     rendition.value.display()
+    loading.clear()
   })
 }
 
@@ -45,16 +51,23 @@ const onMaskClick = (e) => {
 }
 const prePage = () => {
   rendition.value.prev()
-  store.setMenuVisible(false)
+  hideTitleAndMenu()
 }
 
 const nextPage = () => {
   rendition.value.next()
-  store.setMenuVisible(false)
+  hideTitleAndMenu()
 }
 const toggleTitleAndMenu = () => {
   const visible = store.menuVisible
   store.setMenuVisible(!visible)
+  if (!visible) {
+    store.setSettingVisible(-1)
+  }
+}
+const hideTitleAndMenu = () => {
+  store.setMenuVisible(false)
+  store.setSettingVisible(-1)
 }
 </script>
 
