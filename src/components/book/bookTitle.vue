@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-import {bookHooks} from "../../hooks/ebookHooks";
+import {bookHooks} from "../../hooks/book";
 
 const {menuVisible} = bookHooks()
 

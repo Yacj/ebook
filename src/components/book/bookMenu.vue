@@ -21,7 +21,7 @@
 
 <script setup>
 import {ref} from "vue";
-import {bookHooks} from '../../hooks/ebookHooks'
+import {bookHooks} from '../../hooks/book'
 import {booksStore} from "../../store/modules/books";
 import BooksSettingFont from "./booksSettingFont.vue";
 

@@ -29,7 +29,7 @@
 </template>
 
 <script setup>
-import {bookHooks, bookHooksActions} from "../../hooks/ebookHooks";
+import {bookHooks, bookHooksActions} from "../../hooks/book";
 import {onMounted, ref} from "vue";
 
 const {menuVisible, settingVisible, currentBook, fontSize} = bookHooks()
