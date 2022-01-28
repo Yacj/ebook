@@ -20,9 +20,9 @@
 </template>
 
 <script setup>
-import ebookHooks from "../../hooks/ebookHooks";
+import {bookHooks} from "../../hooks/ebookHooks";
 
-const {menuVisible} = ebookHooks()
+const {menuVisible} = bookHooks()
 
 const back = () => {
   history.back()

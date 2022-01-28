@@ -29,18 +29,22 @@
 </template>
 
 <script setup>
-import ebookHooks from "../../hooks/ebookHooks";
+import {bookHooks, bookHooksActions} from "../../hooks/ebookHooks";
 import {onMounted, ref} from "vue";
 
-const {menuVisible, settingVisible, currentBook, setFontSize, fontSize} = ebookHooks()
+const {menuVisible, settingVisible, currentBook, fontSize} = bookHooks()
+const {setFontSize} = bookHooksActions()
 const bookFontSize = fontSize
+
 const showFontFamily = ref(false)
+
 const actions = [
   {name: '选项一'},
   {name: '选项二'},
   {name: '选项三'},
 ];
 onMounted(() => {
+  console.log(currentBook)
   currentBook.value.rendition.themes.fontSize(fontSize + 'px')
 })
 

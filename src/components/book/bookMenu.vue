@@ -21,12 +21,12 @@
 
 <script setup>
 import {ref} from "vue";
-import ebookHooks from '../../hooks/ebookHooks'
+import {bookHooks} from '../../hooks/ebookHooks'
 import {booksStore} from "../../store/modules/books";
 import BooksSettingFont from "./booksSettingFont.vue";
 
 const settingVisible = ref(0)
-const {menuVisible} = ebookHooks()
+const {menuVisible} = bookHooks()
 const showSetting = (key) => {
   const store = booksStore()
   store.setSettingVisible(key)
@@ -41,7 +41,7 @@ const showSetting = (key) => {
   z-index: 200;
   display: flex;
   width: 100%;
-  height: 48px;
+  height: 50px;
   box-shadow: 0 -8px 8px rgba(0, 0, 0, .15);
   font-size: 22px;
   background: #fff;
